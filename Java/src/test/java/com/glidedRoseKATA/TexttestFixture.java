@@ -1,5 +1,8 @@
 package com.gildedroseKATA;
 
+import com.glidedRoseKATA.GildedRoseKATA;
+import com.glidedRoseKATA.Item;
+
 public class TexttestFixture {
     public static void main(String[] args) {
         System.out.println("OMGHAI!");
