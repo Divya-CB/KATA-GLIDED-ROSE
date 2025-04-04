@@ -1,4 +1,4 @@
-package com.gildedroseKATA;
+package com.glidedRoseKATA;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -31,15 +31,16 @@ class GildedRoseKATA {
                     getBackstageQuality(item);
                     break;
                 case CONJURED:
-                    item.quality = checkSellIn(CONJURED, item.sellIn, CONJURED_DEGRADE_AMOUNT);
+                    item.quality -= checkSellIn(CONJURED, item.sellIn, CONJURED_DEGRADE_AMOUNT);
                     break;
                 default:
-                    item.quality = checkSellIn(null, item.sellIn, DEFAULT_DEGRADE_AMOUNT);
+                    item.quality -= checkSellIn(null, item.sellIn, DEFAULT_DEGRADE_AMOUNT);
                     break;
             }
 
             if (!item.name.equals(SULFURAS_HAND_OF_RAGNAROS)) {
-                item.quality -= adjustQuality(item.quality);
+                item.quality = adjustQuality(item.quality);
+                item.sellIn--;
             }
         });
     }
@@ -64,12 +65,7 @@ class GildedRoseKATA {
 
     private static int checkSellIn(String type, int sellIn, int degradeAmount){
         if(sellIn <= 0) {
-            if (Objects.isNull(type))
-                return --degradeAmount;
-            else{
-                degradeAmount = degradeAmount * 2;
-                return --degradeAmount;
-            }
-        } else return --degradeAmount;
+            return degradeAmount * 2;
+        } else return degradeAmount;
     }
 }
