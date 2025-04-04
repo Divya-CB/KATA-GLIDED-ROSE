@@ -1,4 +1,4 @@
-package com.gildedroseKATA;
+package com.glidedRoseKATA;
 
 public class Item {
 
