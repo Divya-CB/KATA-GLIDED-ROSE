@@ -1,5 +1,7 @@
 package com.gildedroseKATA;
 
+import com.glidedRoseKATA.GildedRoseKATA;
+import com.glidedRoseKATA.Item;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
