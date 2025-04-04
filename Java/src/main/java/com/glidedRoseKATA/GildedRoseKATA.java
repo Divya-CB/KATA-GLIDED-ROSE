@@ -3,7 +3,7 @@ package com.glidedRoseKATA;
 import java.util.Arrays;
 import java.util.Objects;
 
-class GildedRoseKATA {
+public class GildedRoseKATA {
 
     private static final String SULFURAS_HAND_OF_RAGNAROS = "Sulfuras, Hand of Ragnaros";
     private static final String AGED_BRIE = "Aged Brie";
